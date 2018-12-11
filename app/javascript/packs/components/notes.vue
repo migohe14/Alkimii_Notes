@@ -2,12 +2,11 @@
  <div>
    <div class="row">
     <div class="col mb-3">
-      <b-form>
-          <b-form-group>
-              <!-- <b-form-select v-model="title" class="mb-3">
-              </b-form-select> -->
-          </b-form-group> 
-      </b-form>
+
+       <div>
+         <input type="text" v-model="noteSearched" placeholder="Search title.."/>
+      </div>
+ 
   </div>
    <div class="col mb-3">
         <router-link :to="{name:'CreateNote'}">
@@ -21,45 +20,58 @@
       <tr>
         <th scope="col">Title</th>
         <th scope="col">Date</th>
+        <th scope="col">Actions</th>
       </tr>
     </thead>
-    <tbody v-for="note in notes" :key="note.id">
+    <tbody v-for="note in  filteredList">
       <tr>
         <td>{{ note.title }}</td>
-        <td>{{ note.date }}</td>     
-      </tr>
-      <tr>
-        <router-link :to="{ name: 'DeleteNote', params: {note: note } }">
-           <td><button class="btn btn-danger">Delete</button></td>
+        <td>{{ note.date }}</td> 
+        <td>
+          <router-link :to="{ name: 'DeleteNote', params: {note: note } }">
+           <button class="btn btn-danger">Delete</button>
         </router-link>
+        
         <router-link :to="{ name: 'UpdateNote', params: {note: note } }">
-          <td><button class="btn btn-success">Update</button></td>
+          <button class="btn btn-success">Update</button>
         </router-link>
+          
+        </td>   
+          
       </tr>
-
+            
     </tbody>
   </table>
  </div>
 </template>
 
 <script>
+
 import axios from 'axios'
 export default {
  data() {
   return {
    notes: [],
+   noteSearched: '',
   }
  },
  created() {
   axios.get('/api/v1/notes/') 
   .then(response => {
     this.notes = response.data
-   console.log(response.data)
    })
  .catch(e => {
      console.log(e)
   })
  },
+   computed: {
+    filteredList() {
+
+      return this.notes.filter(note => {
+        return note.title.toLowerCase().includes(this.noteSearched.toLowerCase())
+      })
+    }
+  },
  methods: {
    
  }
