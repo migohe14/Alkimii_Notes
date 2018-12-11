@@ -29,11 +29,11 @@
         <td>{{ note.date }}</td> 
         <td>
           <router-link :to="{ name: 'DeleteNote', params: {note: note } }">
-           <button class="btn btn-danger">Delete</button>
+           <button class="btn btn-danger mt-1">Delete</button>
         </router-link>
         
         <router-link :to="{ name: 'UpdateNote', params: {note: note } }">
-          <button class="btn btn-success">Update</button>
+          <button class="btn btn-success mt-1">Update</button>
         </router-link>
           
         </td>   

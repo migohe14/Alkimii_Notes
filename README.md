@@ -10,3 +10,5 @@ rails s
 In other terminal:
 
 ./bin/webpack-dev-server
+
+If you use windows ruby ./bin/webpack-dev-server
