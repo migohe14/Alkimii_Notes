@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="row">
+       <div class="col-sm-6">
         <div class="mb-3">
             <router-link :to="{name:'Notes'}">
                  <button class="btn btn-secondary">Show notes</button>
@@ -41,6 +42,7 @@
                     </p>
                     </b-alert>
                 </div>
+        </div>
     </div>
 </template>
 
