@@ -30,10 +30,10 @@
       </tr>
       <tr>
         <router-link :to="{ name: 'DeleteNote', params: {note: note } }">
-           <td><button class="btn btn-danger">X</button></td>
+           <td><button class="btn btn-danger">Delete</button></td>
         </router-link>
         <router-link :to="{ name: 'UpdateNote', params: {note: note } }">
-          <td><button class="btn btn-success">U</button></td>
+          <td><button class="btn btn-success">Update</button></td>
         </router-link>
       </tr>
 
