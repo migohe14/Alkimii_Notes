@@ -1,14 +1,14 @@
 {
-  "name": "appnotes",
+  "name": "alkimiicodetest",
   "private": true,
   "dependencies": {
     "@rails/webpacker": "3.5",
     "axios": "^0.18.0",
     "bootstrap-vue": "^2.0.0-rc.11",
-    "vue": "^2.5.18",
+    "vue": "^2.5.21",
     "vue-loader": "14.2.2",
     "vue-router": "^3.0.2",
-    "vue-template-compiler": "^2.5.18"
+    "vue-template-compiler": "^2.5.21"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"

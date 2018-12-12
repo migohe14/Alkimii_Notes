@@ -1,14 +1,24 @@
-# Alkimii_Notes
-SPA notes using Ruby on Rails and Vue js (one repo with webpacker)
+# README
 
-bundle install
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-rails db:migrate
+Things you may want to cover:
 
-rails s
+* Ruby version
 
-In other terminal:
+* System dependencies
 
-./bin/webpack-dev-server
+* Configuration
 
-If you use windows ruby ./bin/webpack-dev-server
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
