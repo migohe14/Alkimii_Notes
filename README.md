@@ -1,24 +1,12 @@
-# README
+Install dependencies: bundle install and yarn/npm install
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+rails db:migrate
 
-Things you may want to cover:
+rails s
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+And in other terminal: 
+  ./bin/webpack-dev-server
+  
+  If you use Windows ruby ./bin/webpack-dev-server
+  
+URL: https://afternoon-tundra-24363.herokuapp.com/
