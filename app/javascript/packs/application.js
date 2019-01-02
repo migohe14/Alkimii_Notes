@@ -17,10 +17,22 @@ import App from './app.vue'
 import router from './routes'
 Vue.use(BootstrapVue);
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbolinks:load', () => {
   const app = new Vue({
     el: '#app',
     router,
     render: h => h(App)
   })
 })
+
+// import TurbolinksAdapter from 'vue-turbolinks';
+
+// document.addEventListener('turbolinks:load', () => {
+//   const app = new Vue({
+//     el: "#app",
+//     template: '<App/>',
+//     mixins: [TurbolinksAdapter],
+//     router,
+//     render: h => h(App)
+//   });
+// });

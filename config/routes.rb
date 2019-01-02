@@ -6,6 +6,8 @@ Rails.application.routes.draw do
       end
     end
   end
+  get '/', to: 'home#index'
+  get '/about', to: 'home#about'
 
   root :to => "home#index"
 

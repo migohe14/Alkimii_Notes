@@ -16,8 +16,13 @@
   </head>
 
   <body>
+    <div>
+      <%= render 'shared/navbar' %>
+    </div>
     <%= yield %>
     <%= javascript_pack_tag 'application' %>
-    <%= render 'shared/footer' %>
+    <div class="mt-5">
+      <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>
